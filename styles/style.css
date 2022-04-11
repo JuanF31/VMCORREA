@@ -38,7 +38,7 @@ img{
     width: 8rem;
     background-color: var(--azul__primario);
     padding: .6rem 1.4rem;
-    z-index: 2;
+    z-index: 3;
     transition: all 1s ease-in-out;
 }
 .sidebar.close{
@@ -349,6 +349,20 @@ img{
 .sub__menu li a:hover:after{
     transform: scaleX(1);
 }
+/* ===== Barra ===== */
+.barra{
+    width: auto;
+    position: fixed;
+    z-index: 2;
+    padding: 1rem;
+}
+.barra div{
+    color: var(--blanco);
+    font-size: 2rem;
+    background-color: #20375D;
+    padding: 0 1rem;
+    border-radius: .5rem;
+}
 /* ===== Carrousel Inicio */
 .text__banner{
     font-weight: 500;
@@ -381,6 +395,15 @@ img{
     background-color: var(--azul__primario);
     color: var(--blanco);
     transition: background-color .5s ease-in, color .5s ease-in;
+}
+.btn__azul:hover{
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+
+.btn__blanco:hover{
+    background-color: var(--azul__primario);
+    color: var(--blanco);
 }
 @media (min-width:768px) {
     .btn__custom{

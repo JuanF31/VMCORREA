@@ -6,6 +6,7 @@
     --azul__secudario: #0D7186;
     --blanco: #FFF;
     --gris: #888;
+    --negro: #212121;
 }
 html{
     box-sizing: border-box;
@@ -56,7 +57,7 @@ img{
     .sidebar.close{
         display: block;
     }
-    #btn__open{
+    .barra{
         display: none;
     }
 }
@@ -269,7 +270,8 @@ img{
     overflow: auto; 
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4);
-    backdrop-filter: blur(.4rem);
+    -webkit-backdrop-filter: blur(.5rem);
+    backdrop-filter: blur(.5rem);
 }
 .menu__modal__content {
     border-radius: 1rem;
@@ -296,7 +298,6 @@ img{
         opacity:1
     }
 }
-
 @keyframes animatetop {
     from {
         left:calc(1.5rem - 100%); 
@@ -307,7 +308,6 @@ img{
         opacity:1
     }
 }
-
 .close__modal {
     color: var(--azul__primario);
     float: right;
@@ -315,7 +315,6 @@ img{
     font-weight: bold;
     cursor: pointer;
 }
-
 .menu__modal__header {
     padding: 0 2.5rem;
     color: var(--azul__primario);
@@ -349,6 +348,58 @@ img{
 }
 .sub__menu li a:hover:after{
     transform: scaleX(1);
+}
+/* ===== Carrousel Inicio */
+.text__banner{
+    font-weight: 500;
+}
+@media (min-width:768px) {
+    .text__banner{
+        font-weight: 700;
+        font-size: 5rem !important;
+    }
+}
+@media (min-width:318px) {
+    .text__banner{
+        font-size: 2.5rem !important;
+    }
+}
+@media (min-width:600px){
+    .text__banner{
+        font-size: 4rem !important;
+    }
+}
+.btn__custom{
+    display: none;
+}
+.btn__blanco{
+    background-color: var(--blanco);
+    color: var(--negro);
+    transition: background-color .5s ease-in, color .5s ease-in;
+}
+.btn__azul{
+    background-color: var(--azul__primario);
+    color: var(--blanco);
+    transition: background-color .5s ease-in, color .5s ease-in;
+}
+@media (min-width:768px) {
+    .btn__custom{
+        display: inline-block;
+        padding: .8rem 5rem;
+        border-radius: .5rem;
+        margin: .8rem;
+        font-size: 2rem;
+        font-weight: 500;
+        text-decoration: none;
+    }
+}
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1;
 }
 /* ===== Seccion Home ===== */
 .main{

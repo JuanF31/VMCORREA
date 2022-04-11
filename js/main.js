@@ -1,3 +1,11 @@
+//Function that initial AOS
+AOS.init({
+    duration: 1000
+});
+//End Function AOS
+
+
+
 // Functions that controll open and close the Sidebar
 let sidebar = document.querySelector('.sidebar');
 let closeBtn = document.querySelector('#btn__close');
@@ -15,16 +23,15 @@ openBtn.addEventListener('click', () => {
 
 
 // Function that controll the modal menu
-var btn = document.querySelector('#servicios__modal');
+var btn = document.querySelectorAll('#servicios__modal');
 var modal = document.querySelector("#myModal");
 var span = document.getElementsByClassName("close__modal")[0];
 
 
-
-btn.addEventListener('click', (e) => {
+btn.forEach(btn => btn.addEventListener('click', (e) => {
     e.preventDefault();
     modal.style.display = "block";
-});
+}));
 
 span.onclick = function(){
     modal.style.display = "none";

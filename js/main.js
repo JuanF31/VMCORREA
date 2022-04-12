@@ -23,23 +23,38 @@ openBtn.addEventListener('click', () => {
 
 
 // Function that controll the modal menu
-var btn = document.querySelectorAll('#servicios__modal');
+var btn = document.querySelector('#servicios__modal');
 var modal = document.querySelector("#myModal");
 var span = document.getElementsByClassName("close__modal")[0];
 
 
-btn.forEach(btn => btn.addEventListener('click', (e) => {
+
+btn.addEventListener('click', (e) => {
     e.preventDefault();
+    btn.classList.add('activo');
+    document.querySelector('.wrench').classList.add('activo');
+    document.querySelector('.servicio').classList.add('activo');
+    removeActive();
     modal.style.display = "block";
-}));
+});
 
 span.onclick = function(){
     modal.style.display = "none";
+    btn.classList.remove('activo');
+    document.querySelector('.wrench').classList.remove('activo');
+    document.querySelector('.servicio').classList.remove('activo');
+
+    setActivelink();
 }
 
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
+        btn.classList.remove('activo')
+        document.querySelector('.wrench').classList.remove('activo');
+        document.querySelector('.servicio').classList.remove('activo');
+
+        setActivelink();
     }
 }
 // End function Modal menu
@@ -86,26 +101,93 @@ document.querySelectorAll('.mega__link').forEach(link => link.addEventListener('
     imagen.classList.add('animate__zoomIn');
 }));
 
-
-
 document.querySelectorAll('.mega__link').forEach(link => link.addEventListener('mouseout', (e) => {
     let icono = document.querySelector('#icono');
     let imagen = document.querySelector('#imagen');
-
+    
     icono.src = "";
     imagen.src = "";
     icono.classList.add("d-none");
     imagen.classList.add("d-none");
     imagen.classList.remove("width__25");
 }));
+// End function logos and image
 
 
-
+// Function for dropdown
 $(document).ready(function(){
     $('#btn__servicios__dropdown').click(function(){
         $(this).next('.sub__menu__responsive').slideToggle();
         $(this).find('.dropdown').toggleClass('rotate');
     });
 });
+// End function
 
-
+function setActivelink(){
+    var urlActual = window.location.pathname;
+    switch(urlActual){
+        case "/index.html":
+            document.querySelector('#link__home').classList.add('activo');
+            document.querySelector('.fa-house').classList.add('activo');
+            document.querySelector('.inicio').classList.add('activo');
+        break;
+        case "/nosotros.html":
+            document.querySelector('#link__nosotros').classList.add('activo');
+            document.querySelector('.fa-users').classList.add('activo');
+            document.querySelector('.nosotros').classList.add('activo');
+        break;
+        case "/proyectos.html":
+            document.querySelector('#link__proyectos').classList.add('activo');
+            document.querySelector('.folder').classList.add('activo');
+            document.querySelector('.proyecto').classList.add('activo');
+        break;
+        case "/mundoVMC.html":
+            document.querySelector('#link__mundovmc').classList.add('activo');
+            document.querySelector('.earth').classList.add('activo');
+            document.querySelector('.vmc').classList.add('activo');
+        break;
+        case "/contacto.html":
+            document.querySelector('#link__contacto').classList.add('activo');
+            document.querySelector('.book').classList.add('activo');
+            document.querySelector('.contacto').classList.add('activo');
+        break;
+        case "/catalogos.html":
+            document.querySelector('#link__catalogos').classList.add('activo');
+            document.querySelector('.open__book').classList.add('activo');
+            document.querySelector('.catalogo').classList.add('activo');
+        break;
+        case "/riggin.html":
+            document.querySelector('.wrench').classList.add('activo');
+            document.querySelector('.servicio').classList.add('activo');
+            document.querySelector('#servicios__modal').classList.add('activo');
+        break;
+        case "/automatizacion.html":
+            document.querySelector('.wrench').classList.add('activo');
+            document.querySelector('.servicio').classList.add('activo');
+            document.querySelector('#servicios__modal').classList.add('activo');
+        break;
+    }
+}
+function removeActive(){
+    document.querySelector('#link__home').classList.remove('activo');
+    document.querySelector('.fa-house').classList.remove('activo');
+    document.querySelector('.inicio').classList.remove('activo');
+    document.querySelector('#link__nosotros').classList.remove('activo');
+    document.querySelector('.fa-users').classList.remove('activo');
+    document.querySelector('.nosotros').classList.remove('activo');
+    document.querySelector('#link__proyectos').classList.remove('activo');
+    document.querySelector('.folder').classList.remove('activo');
+    document.querySelector('.proyecto').classList.remove('activo');
+    document.querySelector('#link__mundovmc').classList.remove('activo');
+    document.querySelector('.earth').classList.remove('activo');
+    document.querySelector('.vmc').classList.remove('activo');
+    document.querySelector('#link__contacto').classList.remove('activo');
+    document.querySelector('.book').classList.remove('activo');
+    document.querySelector('.contacto').classList.remove('activo');
+    document.querySelector('#link__catalogos').classList.remove('activo');
+    document.querySelector('.open__book').classList.remove('activo');
+    document.querySelector('.catalogo').classList.remove('activo');
+}
+document.addEventListener('DOMContentLoaded', () =>{
+    setActivelink();
+});

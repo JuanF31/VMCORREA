@@ -11,6 +11,7 @@
 html{
     box-sizing: border-box;
     font-size: 62.5%; /**Reset para REMS - 65.5% = 10px de 16px**/
+    word-break: break-word;
 }
 *, *::before, *::after{
     box-sizing: inherit;
@@ -27,6 +28,11 @@ img{
 /* ==== Utilidades ==== */
 .width__25{
     width: 25% !important;
+}
+.flex__box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* ===== Sidebar Menu ==== */
 .sidebar{
@@ -187,6 +193,13 @@ img{
 .sidebar li a:hover i{
     transition: all 0.5s ease;
     color: var(--azul__primario);
+}
+/* Section active */
+.sidebar__active.activo{
+    background-color: var(--blanco);
+}
+.link__active.activo{
+    color: var(--azul__primario) !important;
 }
 .sidebar li i{
     height: 5rem;
@@ -384,50 +397,11 @@ img{
         font-size: 4rem !important;
     }
 }
-.btn__custom{
-    display: none;
-}
-.btn__blanco{
-    background-color: var(--blanco);
-    color: var(--negro);
-    transition: background-color .5s ease-in, color .5s ease-in;
-}
-.btn__azul{
-    background-color: var(--azul__primario);
-    color: var(--blanco);
-    transition: background-color .5s ease-in, color .5s ease-in;
-}
-.btn__azul:hover{
-    background-color: var(--blanco);
-    color: var(--negro);
-}
 
-.btn__blanco:hover{
-    background-color: var(--azul__primario);
-    color: var(--blanco);
-}
-@media (min-width:768px) {
-    .btn__custom{
-        display: inline-block;
-        padding: .8rem 5rem;
-        border-radius: .5rem;
-        margin: .8rem;
-        font-size: 2rem;
-        font-weight: 500;
-        text-decoration: none;
-    }
-}
-.carousel-caption {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, .5);
-    z-index: 1;
-}
+
 /* ===== Seccion Home ===== */
 .body__container{
-    padding: 4rem;
+    padding: 5rem;
 }
 .text__subheading{
     color: var(--azul__primario);
@@ -454,6 +428,51 @@ h1{
     font-weight: 700 !important;
     text-align: center;
     font-size: 5rem;
-    word-break: break-word;
 }
-
+.text__body{
+    text-align: justify;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+/* ===== Footer ===== */
+.text__footer{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: var(--blanco);
+    text-align: center;
+    font-size: 2.5rem;
+}
+.btn__icon{
+    color: var(--blanco);
+    font-size: 2rem;
+}
+.iconos__redes{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+.iconos__redes li a{
+    transition: color .5s ease-in-out;
+}
+.iconos__redes li a:hover{
+    color: #9e9e9e;
+}
+.copy{
+    opacity: .8;
+    background-color: var(--azul__primario);
+}
+.copy p{
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+}
+/* ===== Seccion Nosotros ===== */
+.heading{
+    font-size: 3.5rem;
+}

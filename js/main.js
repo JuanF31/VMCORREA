@@ -141,7 +141,7 @@ function setActivelink(){
             document.querySelector('.folder').classList.add('activo');
             document.querySelector('.proyecto').classList.add('activo');
         break;
-        case "/mundoVMC.html":
+        case "/mundovmc.html":
             document.querySelector('#link__mundovmc').classList.add('activo');
             document.querySelector('.earth').classList.add('activo');
             document.querySelector('.vmc').classList.add('activo');

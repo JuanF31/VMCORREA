@@ -401,7 +401,12 @@ img{
 
 /* ===== Seccion Home ===== */
 .body__container{
-    padding: 5rem;
+    padding: 2.5rem;
+}
+@media (min-width:768px) {
+    .body__container{
+        padding: 5rem;
+    }
 }
 .text__subheading{
     color: var(--azul__primario);
@@ -469,8 +474,8 @@ h1{
     color: #fff;
     margin: 0;
     text-align: center;
-    padding: 15px;
-    font-size: 16px;
+    padding: 1.5rem;
+    font-size: 1.6rem;
 }
 /* ===== Seccion Nosotros ===== */
 .heading{

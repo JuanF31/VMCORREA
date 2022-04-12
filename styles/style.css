@@ -34,11 +34,20 @@ img{
     justify-content: center;
     align-items: center;
 }
+
 .font-weight-bold{
-    font-weight: 700 !important;
+    font-weight: 500 !important;
     color: white;
     text-align: center;
-    font-size: 8rem;
+    font-size: 4rem;
+}
+@media (min-width:768px) {
+    .font-weight-bold{
+        font-weight: 700 !important;
+        color: white;
+        text-align: center;
+        font-size: 8rem;
+    }
 }
 /* ===== Sidebar Menu ==== */
 .sidebar{

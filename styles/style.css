@@ -306,15 +306,17 @@ img{
     position: relative;
     background-color: var(--blanco);
     margin: auto;
-    padding: 2rem 0;
     border: .1rem solid var(--gris);
     width: 90%;
-    height: auto;
     box-shadow: 0 .4rem .8rem 0 rgba(0,0,0,0.2),0 .6rem 2rem 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s
+}
+.image__container{
+    width: 50rem;
+    height: 35rem;
 }
 
 @-webkit-keyframes animatetop {
@@ -349,7 +351,7 @@ img{
     color: var(--azul__primario);
 }
 .modal__body {
-    padding: 0 1.6rem;
+    padding: 0 0 0 1.8rem;
 }
 .sub__menu{
     padding: 0;

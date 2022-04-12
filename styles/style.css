@@ -34,6 +34,12 @@ img{
     justify-content: center;
     align-items: center;
 }
+.font-weight-bold{
+    font-weight: 700 !important;
+    color: white;
+    text-align: center;
+    font-size: 8rem;
+}
 /* ===== Sidebar Menu ==== */
 .sidebar{
     overflow: scroll;
@@ -414,6 +420,7 @@ img{
     font-weight: 500 !important;
 }
 .sub__line1::after{
+    margin-top: .9rem;
     content: '';
     display: block;
     width: 40%;
@@ -421,6 +428,7 @@ img{
     background-color: var(--azul__secudario);
 }
 .sub__line2::after{
+    margin-top: .9rem;
     content: '';
     display: block;
     width: 20%;
@@ -456,12 +464,25 @@ h1{
     list-style: none;
     padding: 0;
     text-align: center;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 2rem;
 }
 .iconos__redes li a{
     transition: color .5s ease-in-out;
+}
+@media (min-width:768px) {
+    .btn__icon{
+        font-size: 2.5rem;
+    }
+    .iconos__redes{
+        margin-top: 2.5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media (min-width:300px) {
+    .iconos__redes{
+        display: flex;
+        justify-content: space-between;
+    }
 }
 .iconos__redes li a:hover{
     color: #9e9e9e;
@@ -480,4 +501,162 @@ h1{
 /* ===== Seccion Nosotros ===== */
 .heading{
     font-size: 3.5rem;
+    color: var(--azul__primario);
+}
+/* ===== Seccion Contacto ==== */
+.title-mapa{
+    color: var(--azul__primario);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.mapa-contacto{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+.mapa-circular{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+}
+.icono-contacto ul{
+    list-style: none;
+    font-size: 1.6rem;
+}
+.icono-contacto ul li p i{
+    color: var(--azul__primario);
+    font-size: 2rem;
+}
+.title{
+    color: var(--azul__primario);
+    font-size: calc(1.325rem + .9vw);
+}
+.lista-contactanos{
+    list-style: none;
+    padding: 0;
+}
+.lista-contactanos li {
+    padding: 1rem;
+}
+.lista-contactanos li a i{
+    color: var(--azul__primario);
+    font-size: 2rem;
+    font-weight: bold;
+}
+.lista-contactanos li a{
+    color: var(--negro);
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: background-color .5s ease-in-out;
+}
+.lista-contactanos li a::after{
+    display: block;
+    content: "";
+    padding-top: .2rem;
+    border-bottom: solid .3rem #20375d;
+    transform: scaleX(0);  
+    transition: transform .6s ease-in-out;
+    transform-origin: 100% 50%; 
+}
+.lista-contactanos li a:hover:after{
+    transform: scaleX(1); 
+    transform-origin: 0% 50%;
+}
+/*=== Aviso de privacidad ====*/
+.accordion-custom{
+    margin: 1rem !important;      
+    font-size: 1.6rem !important;
+    outline: none !important;
+    box-shadow: none !important;
+}  
+.accordion-button:not(.collapsed) {
+    background-color: #fff !important;
+}
+.accordion-body{
+    margin: 0 1rem !important;
+}
+/* ==== Riggin ==== */
+.bg-appointment-riggin {
+    background: linear-gradient(
+        rgba(32, 55, 93, .60), 
+        rgba(32, 55, 93, .60)
+    ), url(../assets/img/riggin-banner.png) center center no-repeat;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ==== Automatización ==== */
+.bg-appointment-automatizacion{
+    background: linear-gradient(
+    rgba(32, 55, 93, .60), 
+    rgba(32, 55, 93, .60)
+    ), url(../assets/img/automatizacion-banner.png) center center no-repeat;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ==== Industrial ==== */
+.bg-appointment-industrial{
+    background: linear-gradient(
+    rgba(32, 55, 93, .60), 
+    rgba(32, 55, 93, .60)
+    ), url(../assets/img/industrial-banner.jpg) center center no-repeat;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ==== Maquinados ==== */
+.bg-appointment-maquinados{
+    background: linear-gradient(
+    rgba(32, 55, 93, .60), 
+    rgba(32, 55, 93, .60)
+    ), url(../assets/img/maquinados-banner.png) center center no-repeat;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ==== Seguridad Industrial ==== */
+.bg-appointment-seguridadIn{
+    background: linear-gradient(
+    rgba(32, 55, 93, .60), 
+    rgba(32, 55, 93, .60)
+    ), url(../assets/img/seguridad-baner.jpg) center center no-repeat;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ==== Mantenimiento Industrial ==== */
+.bg-appointment-mttoIndustrial{
+    background: linear-gradient(
+    rgba(32, 55, 93, .60), 
+    rgba(32, 55, 93, .60)
+    ), url() center center no-repeat;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ==== Mantenimiento General ==== */
+.bg-appointment-mttoGeneral{
+    background: linear-gradient(
+    rgba(32, 55, 93, .60), 
+    rgba(32, 55, 93, .60)
+    ), url() center center no-repeat;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

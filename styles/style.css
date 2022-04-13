@@ -672,3 +672,11 @@ h1{
     justify-content: center;
     align-items: center;
 }
+/* ===== Seccion Catalogos ==== */
+.nav-pills .nav-link.active{
+    background-color: var(--azul__primario) !important;
+    color: var(--blanco) !important;
+}
+.nav-link{
+    color: var(--azul__primario) !important;
+}

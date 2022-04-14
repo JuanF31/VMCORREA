@@ -601,8 +601,6 @@ h1{
 }
 .flex__end{
     padding-top: 8rem !important;
-    display: flex;
-    justify-content: end;
 }
 .flex__end span{
     font-weight: bold;

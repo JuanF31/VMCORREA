@@ -66,32 +66,32 @@ document.querySelectorAll('.mega__link').forEach(link => link.addEventListener('
 
     switch(e.target.innerText){
         case "Riggin":
-            icono.src = "assets/img/Riggin-tiny.png";
+            icono.src = "assets/icons/Riggin-tiny.png";
             imagen.src = "assets/img/img-riggin.png";
         break;
         case "Automatización":
-            icono.src = "assets/img/automatizacion-tiny.png";
+            icono.src = "assets/icons/automatizacion-tiny.png";
             imagen.src = "assets/img/img-automatizacion.png";
         break;
         case "Industrial 4.0":
-            icono.src = "assets/img/industrial-tiny.png";
+            icono.src = "assets/icons/industrial-tiny.png";
             imagen.src = "assets/img/img-industria.png";
         break;
         case "Maquinados":
-            icono.src = "assets/img/maquinados-tiny.png";
+            icono.src = "assets/icons/maquinados-tiny.png";
             imagen.src = "assets/img/img-maquinados.png";
             imagen.classList.add("width__25");
         break;
         case "Seguridad Industrial":
-            icono.src = "assets/img/seguridad-tiny.png";
+            icono.src = "assets/icons/seguridad-tiny.png";
             imagen.src = "assets/img/img-seguridad.png";
         break;
         case "Manteniminto General":
-            icono.src = "assets/img/mantenimiento-tiny.png";
+            icono.src = "assets/icons/mantenimiento-tiny.png";
             imagen.src = "assets/img/brazos-roboticos-g1.jpg";
         break;
         case "Mantenimiento Industrial":
-            icono.src = "assets/img/mantenimientoInd-tiny.png";
+            icono.src = "assets/icons/mantenimientoInd-tiny.png";
             imagen.src = "assets/img/brazos-roboticos-g1.jpg";
         break;
     }

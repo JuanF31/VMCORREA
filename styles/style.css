@@ -593,7 +593,7 @@ h1{
     background: linear-gradient(
         rgba(32, 55, 93, .60), 
         rgba(32, 55, 93, .60)
-    ), url(../assets/img/riggin-banner.png) center center no-repeat;
+    ), url(../assets/banners/riggin-banner.png) center center no-repeat;
     background-size: cover;
     height: 50vh;
     display: flex;

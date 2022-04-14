@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 /* ===== Variables ===== */
 :root{
-    --azul__primario: #20375D;
-    --azul__secudario: #0D7186;
+    --azul__primario: #2A3659;
+    --azul__secudario: #006D83;
     --blanco: #FFF;
     --gris: #888;
     --negro: #212121;
@@ -34,7 +34,9 @@ img{
     justify-content: center;
     align-items: center;
 }
-
+a{
+    color: var(--azul__primario);
+}
 .font-weight-bold{
     font-weight: 500 !important;
     color: white;
@@ -589,12 +591,22 @@ h1{
     font-size: 1.6rem !important;
     outline: none !important;
     box-shadow: none !important;
-}  
+    font-weight: bold;
+}
 .accordion-button:not(.collapsed) {
     background-color: #fff !important;
+    color: var(--azul__primario);
 }
 .accordion-body{
     margin: 0 1rem !important;
+}
+.flex__end{
+    padding-top: 8rem !important;
+    display: flex;
+    justify-content: end;
+}
+.flex__end span{
+    font-weight: bold;
 }
 /* ==== Riggin ==== */
 .bg-appointment-riggin {
